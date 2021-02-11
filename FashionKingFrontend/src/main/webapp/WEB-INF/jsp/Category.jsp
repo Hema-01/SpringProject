@@ -4,16 +4,12 @@
 
 <body>
 <div class="container">
-<div class="col-xs-12 col-sm-12 col-md-12">
-<img src="https://image.shutterstock.com/image-illustration/bazaar-text-title-headline-3d-260nw-618167345.jpg" alt="logo"
-			style="width: 40px;">
-</div>
-	<div class="col-xs-12 col-sm-8 col-md-8">
+<div class="col-md-12 col-sm-8 ">
 	<form action="<c:url value='insertCategory'/>" method="post" align="center">
 	
 		<table  class="table table-bordered table-responsive" align="center">
-			<tr bgcolor="#C6DEFF">
-				<td colspan="2"><center>Insert Categorire</center></td>
+			<tr bgcolor="">
+				<td colspan="2" bgcolor="#E5E4E2"><center>Insert Categorire</center></td>
 			</tr>
 			<tr>
 				<td>Category Id</td>
@@ -28,7 +24,7 @@
 				<td><textarea row="5" cols="50" name="categoryDesc"></textarea></td>
 			</tr>
 			<tr >
-				<td colspan="2" bgcolor="#E5E4E2">
+				<td colspan="2" >
 					<center>
 					<input type="submit" value="SUBMIT" class="btn btn-info">
 					</center>
@@ -37,7 +33,7 @@
 		</table>
 	</div>
 	</form>
-	<div class="col-xs-12  col-md-8">
+	<div class="col-md-12  col-md-8">
 		<table class="table table-striped  table-bordered ">
 		<thead bgcolor="orange">
 			<th>Category Id</th>
@@ -50,9 +46,10 @@
 			<td>${category.categoryId}</td>
 			<td>${category.categoryName}</td>
 			<td>${category.categoryDesc}</td>
-			<td><a href="editCategory/${category.categoryId }" class="btn btn-info">Edit</a></td>
 			
-			<td><a href="deleteCategory/${category.categoryId }" class="btn btn-danger">Delete</a></td>
+			<td><a href="<c:url value='/updateCategory/${category.categoryId}'/>" class="btn btn-info">Edit</a></td>
+			
+			<td><a href="<c:url value='/deleteCategory/${category.categoryId }'/>" class="btn btn-danger">Delete</a></td>
 		</tr>
 	
 	</c:forEach>

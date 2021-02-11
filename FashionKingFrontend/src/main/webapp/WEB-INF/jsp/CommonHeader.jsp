@@ -39,6 +39,9 @@
 		      <a class="nav-link" href="showCategory">Manage Categories</a>
 		    </li>
 		      <li class="nav-item">
+		      <a class="nav-link" href="showSupplier">Manage Supplier</a>
+		    </li>
+		      <li class="nav-item">
 		      <a class="nav-link" href="#">Contact Us</a>
 		    </li>
 		   <c:if test="${sessionScope.role!=null} ">
@@ -69,6 +72,7 @@
     </li>
   </ul>
 </nav>
+
 </div>
 </body>
 </html>

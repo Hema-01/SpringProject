@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html"%>
+<%@include file="/WEB-INF/jsp/CommonHeader.jsp" %>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
+
+<body>
+<div class="container">
+<div class="col-md-12 col-sm-8 ">
+	<form action="<c:url value='insertsupplier'/>" method="post" align="center">
+	
+		<table  class="table table-bordered table-responsive" align="center">
+			<tr bgcolor="">
+				<td colspan="2" bgcolor="#E5E4E2"><center>Insert Supplier</center></td>
+			</tr>
+			<tr>
+				<td>Supplier Id</td>
+				<td><input type="text"  name="supplierId"/></td>
+			</tr>
+			<tr>
+				<td>Supplier Name</td>
+				<td><input type="text" name="supplierName"/></td>
+			</tr>
+			
+			<tr >
+				<td colspan="2" >
+					<center>
+					<input type="submit" value="SUBMIT" class="btn btn-info">
+					</center>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+	<div class="col-md-12  col-md-8">
+		<table class="table table-striped  table-bordered ">
+		<thead bgcolor="orange">
+			<th>Supplier Id</th>
+			<th>Supplier Name</th>
+		
+			<th colspan='2'>Action</th>
+		</thead>
+	<c:forEach items="${supplierList }" var="supplier">
+		<tr>
+			<td>${supplier.supplierId}</td>
+			<td>${supplier.supplierName}</td>
+			
+			
+			<td><a href="<c:url value='/updateSupplier/${supplier.supplierId}'/>" class="btn btn-info">Edit</a></td>
+			
+			<td><a href="<c:url value='/deleteCategory/${supplier.supplierId }'/>" class="btn btn-danger">Delete</a></td>
+		</tr>
+	
+	</c:forEach>
+	</table>
+	</div>
+</div>
+</body>
+</html>

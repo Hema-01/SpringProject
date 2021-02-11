@@ -12,7 +12,8 @@
 			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9CMsWvAteXCJF5i15kOjpINxMwhGVYB4U8w&usqp=CAU"/>
 		</div>
 		<div class="col-sm-6">
-			Welcome: $(sessionScope.username)
+			Welcome: ${sessionScope.username}
+			
 			<h3>I am in Admin Module</h3>
 		</div>
 	</div>
